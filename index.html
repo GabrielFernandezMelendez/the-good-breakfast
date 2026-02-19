@@ -1,2 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Your content goes here ↓↓↓ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Toast</title>
+    <!-- Aquí luego irán los estilos CSS para hacerlo bonito -->
+    <style>
+        /* para centrar la tabla*/
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #2c5a85;
+            color: white;
+        }
+
+        td,
+        th {
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        /* Estilos básicos para que visualmente se parezca a tu imagen */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* nav a { text-decoration: none; margin: 0 10px; color: black; } */
+        /*importante ver cuantos elementos quieren */
+        header,
+        footer,
+        body {
+            padding: 20px;
+            background-color: #3b75ae;
+        }
+
+        /* Un gris suave */
+        main {
+            padding: 50px 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        ETIQUETA <header>: Define la cabecera de la página. 
+        Es un contenedor semántico que suele llevar el logotipo, 
+        el menú de navegación, etc.
+    -->
+    <header>
+        <!-- 
+            ETIQUETA <nav>: Define una sección de navegación. 
+            Le dice al navegador y a los motores de búsqueda: 
+            "esto de aquí son los enlaces principales para moverse por el sitio".
+            Es importante por accesibilidad y SEO.
+        -->
+        <nav>
+            <!-- 
+                ETIQUETA <a>: El elemento anchor (anclaje). 
+                Crea un hipervínculo. El atributo 'href' es la dirección a la que apunta.
+                '#' es un marcador de posición que significa "enlace a esta misma página".
+                Más adelante, cambiarás '#home' por 'index.html', '#about' por 'about.html', etc.
+            -->
+            <a href="#home">HOME</a>|
+            <a href="#about">ABOUT US</a>|
+            <a href="#menu">MENU</a>|
+            <a href="#contact">CONTACT US</a>
+        </nav>
+    </header>
+
+
+    <!-- 
+        ETIQUETA <main>: Define el contenido principal y ÚNICO de la página. 
+        Solo debe haber UNA etiqueta <main> por página. Aquí va lo que no se repite
+        (a diferencia del header o footer que se repiten en todas las páginas).
+    -->
+    <main>
+        <!-- 
+            ETIQUETA <h1>: Heading 1 (encabezado de nivel 1). 
+            Es el título más importante de la página. Solo debe haber uno por página.
+            Le dice a los buscadores de qué trata principalmente esta página.F
+        -->
+        <h1>The good breakfast</h1>
+
+        <!-- 
+            ETIQUETA <p>: Párrafo.
+        -->
+        <p>Here you will find all sorts of delicious treats</p>
+        <!-- 
+        ETIQUETA <footer>: Define el pie de página.
+        Suele contener información de copyright, enlaces secundarios, 
+        o en este caso, el eslogan de la marca.
+    -->
+
+        <!-- 
+            El <br> es un salto de línea. No necesita etiqueta de cierre.
+            Las <p> son más semánticas para párrafos, pero si quieres forzar
+            los saltos de línea tal cual en la imagen, puedes usar <br> o dos <p>.
+        -->
+        <figure>
+            <img src="https://ix-marketing.imgix.net/autocompress.png?auto=format,compress&w=2618"
+                alt="Atardecer en la montaña" width="400" height="400">
+            <!-- aqui hay que poner lo de figure para que te permita poner pie foto-->
+            <figcaption>powered by biscuit.</figcaption>
+        </figure>
+        <!-- Alternativa con <br>:
+            powered by biscuit.<br>
+            From the oven with love
+        -->
+        <p>
+            Our commitment is to use impeccable sourcing and <strong>quality ingredients</strong> to help you code.An
+            ongoing
+            collaboration between the classroom staff and the development team allow us to iterate our content and give
+            our
+            students the coding 'fruits and vegetables' -mainly made of JavaScript- that they need to grow as a healthy
+            developer
+        </p>
+        <!--para poner una frase -->
+        <blockquote>
+            Good code & good coffee, everyday
+        </blockquote>
+
+        <!-- 
+        <h2>Menu</h2>
+
+        <h3>Coffees</h3>
+        <ul>
+            <li>Café latte</li>
+            <li>American</li>
+            <li>Machiatto</li>
+            <li>Capuccino</li>
+        </ul>
+
+        <h3>Teas</h3>
+        <ul>
+            <li>Earl Grey</li>
+            <li>Green Tea</li>
+            <li>Rooibos</li>
+        </ul>
+        -->
+        <h2>Menu Table</h2>
+
+        <table border="1">
+            <tr>
+                <th>Coffees</th>
+                <th>Teas</th>
+            </tr>
+            <tr>
+                <td>Café latte</td>
+                <td>Earl Grey</td>
+            </tr>
+            <tr>
+                <td>American</td>
+                <td>Green Tea</td>
+            </tr>
+            <tr>
+                <td>Machiatto</td>
+                <td>Rooibos</td>
+            </tr>
+            <tr>
+                <td>Capuccino</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Reservas Aquí</h2>
+
+        <form>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label>Tipo de reserva:</label><br>
+            <input type="radio" id="snack" name="type" value="snack">
+            <label for="snack">Snack</label>
+
+            <input type="radio" id="breakfast" name="type" value="breakfast">
+            <label for="breakfast">Breakfast</label><br><br>
+
+            <label for="people">Número de personas:</label><br>
+            <select id="people" name="people">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+
+    <footer>
+        <p>From the oven with love</p>
+
+        <p>
+            <a href="mailto:info@urbantoast.com">Contact Us</a>
+        </p>
+
+        <p>Opening hours:</p>
+        <p>Monday - Friday: 8:00 - 18:00</p>
+    </footer>D
+
+</body>
+
+</html>
