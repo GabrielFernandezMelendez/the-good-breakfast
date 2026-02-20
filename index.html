@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Urban Toast</title>
-       <!-- Aquí enlazamos el archivo CSS externo -->
+    <!-- Aquí luego irán los estilos CSS para hacerlo bonito -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -87,7 +87,11 @@
         <blockquote>
             Good code & good coffee, everyday
         </blockquote>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/f6jBSMP7uc8" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
         <!-- 
         <h2>Menu</h2>
 
@@ -154,7 +158,12 @@
 
             <button type="submit">Enviar</button>
         </form>
-
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tú@ejemplo.com">
+            <input type="file" name="avatar" accept="image/*">
+            <button type="submit">Enviar</button>
+        </form>
     </main>
 
 
